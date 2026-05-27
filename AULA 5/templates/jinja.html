@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Atividade Jinja</title>
+</head>
+<body>
+    <div class="jinja">
+        <h3>Olá, {{ nome_simples }}</h3>
+        <p>Nome: {{ nome_simples }}</p>
+        <p>Idade: {{ idade_simples }} anos</p>
+        
+        <h3>Dados do dicionário:</h3>
+        <p>Nome: {{ usuario.nome }}</p>
+        <p>Email: {{ usuario.email }}</p>
+        
+        <h3>Nomes de alunos:</h3>
+        <ul>
+        {% for aluno in alunos %}
+            <li>{{ aluno }}</li>
+        {% endfor %}
+        </ul>
+        
+        <h3>Nota:</h3>
+        <p>Nota obtida: {{ nota }}</p>
+        <div id="resultado">
+            {% if nota >= 7 %}
+                <p class="aprovado">Aprovado</p>
+            {% else %}
+                <p class="reprovado">Reprovado</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
