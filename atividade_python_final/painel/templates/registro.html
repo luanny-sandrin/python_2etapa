@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+
+<h2>Cadastro</h2>
+
+<form method="POST">
+
+    <div class="mb-3">
+        <label>Nome</label>
+        <input type="text" class="form-control" name="nome" required>
+    </div>
+
+    <div class="mb-3">
+        <label>Email</label>
+        <input type="email" class="form-control" name="email" required>
+    </div>
+
+    <div class="mb-3">
+        <label>Senha</label>
+        <input type="password" class="form-control" name="senha" required>
+    </div>
+
+    <button class="btn btn-success">
+        Cadastrar
+    </button>
+
+</form>
+
+{% endblock %}
