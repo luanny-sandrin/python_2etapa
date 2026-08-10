@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Painel de Tarefas</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <div class="container">
+        
+        <a class="navbar-brand" href="/">
+        
+        Painel de Tarefas
+        
+        </a>
+        
+        <div>
+        
+        <a class="btn btn-outline-light me-2" href="/">
+        
+        Início
+        
+        </a>
+        
+        <a class="btn btn-outline-light me-2" href="/login">
+        
+            <i class="bi bi-box-arrow-in-right"></i>
+
+            Login
+        
+        </a>
+        
+        <a class="btn btn-outline-light me-2" href="/registro">
+        
+            <i class="bi bi-person-plus"></i>
+
+            Cadastro
+        
+        </a>
+
+        <button
+        class="btn btn-secondary me-2"
+        onclick="mudarTema()"> 🌙 Tema </button>
+
+        
+        <a class="btn btn-danger" href="/logout">
+        
+            <i class="bi bi-box-arrow-right"></i>
+
+            Sair
+        
+        </a>
+        
+        </div>
+        
+        </div>
+        
+        </nav>
+    
+
+<div class="container mt-4">
+
+    {% block conteudo %}
+
+    {% endblock %}
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>  
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<footer>
+
+    <hr>
+    
+    <p>
+    
+    Projeto feito por Analice.
+    
+    </p>
+    
+    </footer>    
+</body>
+</html>
